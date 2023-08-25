@@ -1,0 +1,110 @@
+body {
+    background-color: #1f232d;
+    margin-top: 60px;
+    padding: 20px;
+    color: white;
+}
+
+header nav {
+    position: fixed;    
+    height: 50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 12;
+}
+
+.navbar {
+    margin: 5px 20px 0 auto;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .menu li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav .menu a {
+    color: #1fbebf;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .menu a:hover {
+    color: #D2471F;
+}
+
+.active {
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 3px !important;
+}
+
+.custom-bg-color {
+    background-color: #10151d;
+}
+
+#typing-container {
+    position: relative;
+    overflow: hidden;
+    height: 2.1em; 
+    text-align: center;
+    color: #1fbebf;
+    font-weight: bold;
+}
+  
+#typing-effect {
+    font-size: 24px;
+    white-space: pre;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo img {
+    width: 350px;
+    height: 200px;
+}
+
+#arrow {
+    display: flex;
+    justify-content: center;
+}
+
+#arrow2 {
+    display: flex;
+    justify-content: center;
+}
+
+#arrow img {
+    width: 150px;
+    height: 200px;
+}
+
+#arrow2 img {
+    width: 150px;
+    height: 200px;
+}
+
+#content {
+    background: radial-gradient(rgba(103, 228, 221, 0.7), rgb(88, 230, 223, 0.7));
+    box-shadow: 1px 0px #1cbab2, -1px 0px #1cbab2, 0px 1px #1cbab2, 0px -1px #1cbab2, 3px 0px #158e88, -3px 0px #158e88, 0px 3px #158e88, 0px -3px #158e88;
+    width: 50%;
+    font-family: Google Sans Text,ui-sans-serif,system-ui,-apple-system, BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 10px;
+}
