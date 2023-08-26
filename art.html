@@ -9,6 +9,13 @@
     <!-- Linking an external CSS file named "style.css" from the "css" directory -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
       canvas {
         border: 1px solid black;
       }
@@ -63,6 +70,9 @@
       ctx.fill();
       ctx.closePath();
     }
+
+    regenerateButton.addEventListener('click', generateArt);
+    generateArt(); // Initial generation
   </script>
  
   <!-- Linking an external JavaScript file named "script.js" from the "js" directory -->
