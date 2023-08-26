@@ -19,6 +19,8 @@ To be implemented:
 
 ### Screenshots:
 ![image](https://github.com/HossainShakir/WhoASCIIdCTP/assets/50673480/9031bd8a-cecf-46aa-a35e-e59de670494e)
+![image](https://github.com/HossainShakir/WhoASCIIdCTP/assets/50673480/e7a49870-a9af-41ef-854d-0d3145121798)
+
 
 ### Contributing members:
 Shakir Hossain,
