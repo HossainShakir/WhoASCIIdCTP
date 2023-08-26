@@ -13,6 +13,7 @@ HarmoniArt is a project that displays our attempt to generate art based on the g
 
 Implemented:
 - [x] Generate art based on an algorithim
+- [x] Select specific shapes to use on the art
 
 To be implemented:
 - Generate music based on an algorithm
