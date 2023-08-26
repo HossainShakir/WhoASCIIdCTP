@@ -8,6 +8,11 @@
 
     <!-- Linking an external CSS file named "style.css" from the "css" directory -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
 </head>
 
 <body>
@@ -24,19 +29,45 @@
     </div>
   </nav>
   </header>
-
-  <!-- Lovely Art + Sad Music -->
-  <div style="text-align: center;">
-    <img src="img/shiba.png" alt="Animated GIF" style="height: 500px">
-  </div>
-
-  <div class="audio-container">
-    <audio controls autoplay loop>
-      <source src="img/Past_lives.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+  
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+  
+    // Function to generate random number from Gaussian distribution
+    function gaussianRandom() {
+      let u = 0, v = 0;
+      while (u === 0) u = Math.random(); // Converting [0,1) to (0,1)
+      while (v === 0) v = Math.random();
+      return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    }
+  
+    // Function to generate random color
+    function randomColor() {
+      return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+    }
+  
+    // Number of circles to generate
+    const numCircles = 100;
+  
+    for (let i = 0; i < numCircles; i++) {
+      const x = canvas.width / 2 + gaussianRandom() * 50; // Adjust 50 to control spread
+      const y = canvas.height / 2 + gaussianRandom() * 50;
+      const radius = Math.abs(gaussianRandom() * 20) + 5; // Minimum radius of 5
+      const color = randomColor();
+  
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, 2 * Math.PI);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.closePath();
+    }
+  </script>
 
   <!-- Linking an external JavaScript file named "script.js" from the "js" directory -->
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+
+
