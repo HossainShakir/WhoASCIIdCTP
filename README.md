@@ -6,11 +6,16 @@
     <img src="./img/logo.png" align=center width="50%">
 </p>
 
-HarmoniArt is a project that displays our attempt to generate art based on the gaussian algorithm. This project is made using JavaScript, HTML and CSS. To locally run this project, you need to install live server extension in Visual Studio code. Alternatively, you can visit our github pages link: https://hossainshakir.github.io/WhoASCIIdCTP/
+HarmoniArt is a project that displays our attempt to generate art based on the gaussian algorithm using shapes. This project is made using JavaScript, HTML and CSS. To locally run this project, you need to install live server extension in Visual Studio code. Alternatively, you can visit our github pages link: https://hossainshakir.github.io/WhoASCIIdCTP/
 
 
 ### Features:
-- [x] Generate art based on algorithims
+
+Implemented:
+- [x] Generate art based on an algorithim
+
+To be implemented:
+- Generate music based on an algorithm
 
 ### Screenshots:
 
