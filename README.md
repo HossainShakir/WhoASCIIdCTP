@@ -12,8 +12,8 @@ HarmoniArt is a project that displays our attempt to generate art based on the g
 ### Features:
 
 Implemented:
-- [x] Generate art based on an algorithim
-- [x] Select specific shapes to use on the art
+- [x] Generate art based on the Gaussian distribution algorithim
+- [x] Provides a selection of specific shapes to include in the art
 
 To be implemented:
 - Generate music based on an algorithm
@@ -24,7 +24,8 @@ To be implemented:
 
 
 ### Contributing members:
-Shakir Hossain,
+Riaz Ahmed,
 Johnson Chen,
-Daphne Tang,
-Riaz Ahmed
+Shakir Hossain,
+Daphne Tang
+
