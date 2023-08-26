@@ -1,3 +1,4 @@
+// Navbar transparent and block scroll animation
 var nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function () {
@@ -8,6 +9,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Generating Random Symbols that turn into Quotes Animation
 const typingElement = document.getElementById("typing-effect");
 const symbols = "!@#$%^&*()_-+=[]{}|;:,.<>?";
 const texts = [
@@ -48,13 +50,14 @@ async function loopThroughTexts() {
 
 loopThroughTexts();
 
+// Click Arrow to scroll to a specific place
 document.getElementById('arrow').addEventListener('click', function() {
     const content = document.getElementById('content2');
     const contentOffset = content.offsetTop;
     
     window.scrollTo({
       top: contentOffset,
-      behavior: 'smooth' // Add smooth scrolling effect
+      behavior: 'smooth' 
     });
 });
 
@@ -64,6 +67,6 @@ document.getElementById('arrow2').addEventListener('click', function() {
     
     window.scrollTo({
       top: contentOffset,
-      behavior: 'smooth' // Add smooth scrolling effect
+      behavior: 'smooth' 
     });
 });
