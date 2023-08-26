@@ -26,6 +26,6 @@ To be implemented:
 ### Contributing members:
 Riaz Ahmed,
 Johnson Chen,
-Shakir Hossain,
+Shakir Hossain, and
 Daphne Tang
 
