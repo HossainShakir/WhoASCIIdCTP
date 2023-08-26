@@ -18,6 +18,7 @@ To be implemented:
 - Generate music based on an algorithm
 
 ### Screenshots:
+![image](https://github.com/HossainShakir/WhoASCIIdCTP/assets/50673480/9031bd8a-cecf-46aa-a35e-e59de670494e)
 
 ### Contributing members:
 Shakir Hossain,
