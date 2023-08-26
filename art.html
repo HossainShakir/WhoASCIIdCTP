@@ -11,6 +11,7 @@
     <style>
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -71,7 +72,9 @@
       ctx.closePath();
     }
   </script>
- 
+<div class="buttons" id="art-generator">
+  <button onclick="window.location.href='art.html'">Generate Now</button>
+</div>
   <!-- Linking an external JavaScript file named "script.js" from the "js" directory -->
   <script type="text/javascript" src="js/script.js"></script>
 </body>
