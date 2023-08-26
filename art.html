@@ -39,9 +39,23 @@
   </header>
   
   <canvas id="canvas" width="800" height="600"></canvas>
+  <div class="checkboxes">
+    <label><input type="checkbox" id="circleCheckbox" checked> Circles</label>
+    <label><input type="checkbox" id="squareCheckbox" checked> Squares</label>
+    <label><input type="checkbox" id="triangleCheckbox" checked> Triangles</label>
+  </div>
+  
+<div class="buttons" id="art-generator">
+  <button>Generate Now</button>
+</div>
+
   <script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
+     const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const circleCheckbox = document.getElementById('circleCheckbox');
+  const squareCheckbox = document.getElementById('squareCheckbox');
+  const triangleCheckbox = document.getElementById('triangleCheckbox');
+  const generateButton = document.getElementById('art-generator');
   
     // Function to generate random number from Gaussian distribution
     function gaussianRandom() {
@@ -56,28 +70,41 @@
       return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     }
   
-    // Number of circles to generate
-    const numCircles = 100;
-  
-    for (let i = 0; i < numCircles; i++) {
-      const x = canvas.width / 2 + gaussianRandom() * 100; // Adjust 50 to control spread
+    // Number of shapes to generate
+    function generateArt() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const numShapes = 150;
+    for (let i = 0; i < numShapes; i++) {
+      const x = canvas.width / 2 + gaussianRandom() * 100;
       const y = canvas.height / 2 + gaussianRandom() * 100;
-      const radius = Math.abs(gaussianRandom() * 20) + 5; // Minimum radius of 5
+      const size = Math.abs(gaussianRandom() * 40) + 10;
       const color = randomColor();
-  
+      const shapeType = Math.floor(Math.random() * 3); // 0: Circle, 1: Square, 2: Triangle
+
       ctx.beginPath();
-      ctx.arc(x, y, radius, 0, 2 * Math.PI);
-      ctx.fillStyle = color;
-      ctx.fill();
-      ctx.closePath();
+      if ((shapeType === 0 && circleCheckbox.checked) ||
+          (shapeType === 1 && squareCheckbox.checked) ||
+          (shapeType === 2 && triangleCheckbox.checked)) {
+        if (shapeType === 0) {
+          ctx.arc(x, y, size, 0, 2 * Math.PI); // Circle
+        } else if (shapeType === 1) {
+          ctx.rect(x - size / 2, y - size / 2, size, size); // Square
+        } else if (shapeType === 2) {
+          ctx.moveTo(x, y - size / 2);
+          ctx.lineTo(x - size / 2, y + size / 2);
+          ctx.lineTo(x + size / 2, y + size / 2);
+          ctx.closePath(); // Triangle
+        }
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
+  generateButton.addEventListener('click', generateArt);
   </script>
-<div class="buttons" id="art-generator">
-  <button onclick="window.location.href='art.html'">Generate Now</button>
-</div>
   <!-- Linking an external JavaScript file named "script.js" from the "js" directory -->
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
-
-
