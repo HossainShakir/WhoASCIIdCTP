@@ -9,4 +9,4 @@ Daphne Tang,
 Riaz Ahmed
 
 ### Features:
-[x] Generate art based on algorithims 
+- [x] Generate art based on algorithims 
